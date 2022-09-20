@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/reactRouter3/static/css/main.073c9b0a.css",
-    "main.js": "/reactRouter3/static/js/main.8fdc3e47.js",
-    "static/js/787.ab6a5471.chunk.js": "/reactRouter3/static/js/787.ab6a5471.chunk.js",
-    "index.html": "/reactRouter3/index.html",
-    "main.073c9b0a.css.map": "/reactRouter3/static/css/main.073c9b0a.css.map",
-    "main.8fdc3e47.js.map": "/reactRouter3/static/js/main.8fdc3e47.js.map",
-    "787.ab6a5471.chunk.js.map": "/reactRouter3/static/js/787.ab6a5471.chunk.js.map"
+    "main.css": "/roboHash_React/static/css/main.073c9b0a.css",
+    "main.js": "/roboHash_React/static/js/main.bb80a33d.js",
+    "static/js/787.ab6a5471.chunk.js": "/roboHash_React/static/js/787.ab6a5471.chunk.js",
+    "index.html": "/roboHash_React/index.html",
+    "main.073c9b0a.css.map": "/roboHash_React/static/css/main.073c9b0a.css.map",
+    "main.bb80a33d.js.map": "/roboHash_React/static/js/main.bb80a33d.js.map",
+    "787.ab6a5471.chunk.js.map": "/roboHash_React/static/js/787.ab6a5471.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.8fdc3e47.js"
+    "static/js/main.bb80a33d.js"
   ]
 }
