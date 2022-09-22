@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import logo from './assets/images/logo.svg'
 import robots from './mookdata/robot.json'
 import Robot from './components/robot';
 import styles from './App.module.css'
@@ -7,6 +7,10 @@ import styles from './App.module.css'
 function App() {
   return (
     <div className={ styles.app }>
+      <div className={styles.appHeader}>
+        <img src={logo} className={styles.appLogo} alt="" />
+        <h1>羅伯特機器人online購物平台</h1>
+      </div>
       <div className={ styles.robotList }>
         { robots.map((r, index) => {
           return <Robot id={r.id} name={r.name} email={r.email} />

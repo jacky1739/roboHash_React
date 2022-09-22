@@ -43,5 +43,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://jacky1739.github.io/roboHash_React"
+  "homepage": "https://jacky1739.github.io/roboHash_React",
+  "devDependencies": {
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
 }

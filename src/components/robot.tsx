@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Robot.module.css'
 
 // 從父元件傳遞到子元件定義的接口
 interface RobotProps {
@@ -9,11 +10,11 @@ interface RobotProps {
 
 const Robot: React.FC<RobotProps> = ({id, name, email}) => {
   return (
-    <li key={id}>
+    <div className={styles.cardContainer} key={id}>
       <img src={`https://robohash.org/${id}`} alt="robot" />
       <h2>{ name }</h2>
       <p>{ email }</p>
-    </li>
+    </div>
   )
 }
 
