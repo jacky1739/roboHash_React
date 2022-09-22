@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/roboHash_React/static/css/main.033f9f99.css",
-    "main.js": "/roboHash_React/static/js/main.7ce48ac4.js",
+    "main.css": "/roboHash_React/static/css/main.6bb2b461.css",
+    "main.js": "/roboHash_React/static/js/main.f31a15d8.js",
     "static/js/787.ab6a5471.chunk.js": "/roboHash_React/static/js/787.ab6a5471.chunk.js",
+    "static/media/Slidefu-Regular-2.ttf": "/roboHash_React/static/media/Slidefu-Regular-2.e4c9a5f7480690faa69f.ttf",
+    "static/media/logo.svg": "/roboHash_React/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/roboHash_React/index.html",
-    "main.033f9f99.css.map": "/roboHash_React/static/css/main.033f9f99.css.map",
-    "main.7ce48ac4.js.map": "/roboHash_React/static/js/main.7ce48ac4.js.map",
+    "main.6bb2b461.css.map": "/roboHash_React/static/css/main.6bb2b461.css.map",
+    "main.f31a15d8.js.map": "/roboHash_React/static/js/main.f31a15d8.js.map",
     "787.ab6a5471.chunk.js.map": "/roboHash_React/static/js/787.ab6a5471.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.033f9f99.css",
-    "static/js/main.7ce48ac4.js"
+    "static/css/main.6bb2b461.css",
+    "static/js/main.f31a15d8.js"
   ]
 }
