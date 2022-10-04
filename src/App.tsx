@@ -9,6 +9,7 @@ const App: React.FC = () => {
   const [count, setCount] = useState(0)
   const [robotGallery, setRobotGallery] =useState<any>([])
   const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string>()
 
   useEffect(() => {
     document.title = `點擊${count}`
@@ -18,9 +19,15 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
-      const response = await fetch('https://jsonplaceholder.typicode.com/users')
-      const data = await response.json()
-      setRobotGallery(data)
+      try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await response.json()
+        setRobotGallery(data)
+      } catch (e) {
+        if (e instanceof Error) {
+          setError(e.message)
+        }
+      }
       setLoading(false)
     }
 
@@ -38,6 +45,9 @@ const App: React.FC = () => {
       }}>+ 1</button>
       <span>state : {count}</span>
       <ShoppingCart></ShoppingCart>
+      {/* &&是一種二元判斷的符號 */}
+      {/* 如果error不等於空 也不等於字串 就顯示error */}
+      { (!error || error!=="") && <div>{error}</div>}
       { !loading ? (
         <div className={ styles.robotList }>
         { robotGallery.map((r) => {
