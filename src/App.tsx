@@ -1,21 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import logo from './assets/images/logo.svg'
 // import robots from './mookdata/robot.json'
-import Robot from './components/robot';
+import Robot from './components/robot'
 import styles from './App.module.css'
 import ShoppingCart from './components/ShoppingCart'
 
-const App: React.FC = () => {
+// interface Props {
+//   username: string
+// }
+
+const App: React.FC<any> = (props) => {
   const [count, setCount] = useState(0)
   const [robotGallery, setRobotGallery] =useState<any>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string>()
 
+  const { username } = props
+
   useEffect(() => {
     document.title = `點擊${count}`
   }, [count])
 
-  // useEffect 返回的是一個函數或null, 
+  // useEffect 返回的是一個函數或null,
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
@@ -40,6 +46,7 @@ const App: React.FC = () => {
         <img src={logo} className={styles.appLogo} alt="" />
         <h1>羅伯特機器人online購物平台</h1>
       </div>
+        <h2>{username}</h2>
       <button onClick={() => {
         setCount(count + 1)
       }}>+ 1</button>
