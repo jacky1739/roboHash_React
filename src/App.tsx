@@ -9,13 +9,11 @@ import ShoppingCart from './components/ShoppingCart'
 //   username: string
 // }
 
-const App: React.FC<any> = (props) => {
+const App: React.FC = () => {
   const [count, setCount] = useState(0)
   const [robotGallery, setRobotGallery] =useState<any>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string>()
-
-  const { username } = props
 
   useEffect(() => {
     document.title = `點擊${count}`
@@ -46,7 +44,6 @@ const App: React.FC<any> = (props) => {
         <img src={logo} className={styles.appLogo} alt="" />
         <h1>羅伯特機器人online購物平台</h1>
       </div>
-        <h2>{username}</h2>
       <button onClick={() => {
         setCount(count + 1)
       }}>+ 1</button>

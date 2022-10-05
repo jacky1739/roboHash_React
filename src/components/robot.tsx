@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './Robot.module.css'
+import { appContext } from '../index'
 
 // 從父元件傳遞到子元件定義的接口
 interface RobotProps {
@@ -9,11 +10,13 @@ interface RobotProps {
 }
 
 const Robot: React.FC<RobotProps> = ({id, name, email}) => {
+  const value = useContext(appContext)
   return (
     <div className={styles.cardContainer} key={id}>
       <img src={`https://robohash.org/${id}`} alt="robot" />
       <h2>{ name }</h2>
       <p>{ email }</p>
+      <p>作者：{value.username}</p>
     </div>
   )
 }
