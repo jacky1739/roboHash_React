@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './ShoppingCart.module.css'
 import { FiShoppingCart } from 'react-icons/fi'
+import { appContext } from '../AppState'
 
 // 元件對外傳遞資料的窗口, 從父元件傳遞向子元件的數據
 interface Props {
@@ -37,29 +38,40 @@ class ShoppingCart extends React.Component<Props, State> {
 
   render () {
     return (
-      <div className={styles.cartContainer}>
-        <button className={styles.button}
-        // onClick={(e) => {
-          // state 是私有的, 可以認為state是組件的 "私有屬性"
-          // 可以用 setState() 來修改 State, 使用賦值的方式, 調用了 setState 後 React 會更新元件的狀態並調用 Render 方式重新渲染
-          // React 會對 setState 做出優化, 將多個 state 的修改合併為一次, 所以 setState 是異步的, 不能依賴當前的 state 來計算下一個 state
-          // this.setState({ isOpen: !this.state.isOpen })
-        // }}
-          onClick={this.handleClick}
-        >
-          <FiShoppingCart />
-          <span>購物車 2 (件)</span>
-        </button>
-        <div style={{
-          display: this.state.isOpen ? "block" : "none"
-        }}
-        >
-          <ul className={styles.cartDropDown}>
-            <li>robot 1</li>
-            <li>robot 2</li>
-          </ul>
-        </div>
-      </div>
+      <appContext.Consumer>
+        {
+          (value) => {
+            return (
+              <div className={styles.cartContainer}>
+                <button className={styles.button}
+                // onClick={(e) => {
+                  // state 是私有的, 可以認為state是組件的 "私有屬性"
+                  // 可以用 setState() 來修改 State, 使用賦值的方式, 調用了 setState 後 React 會更新元件的狀態並調用 Render 方式重新渲染
+                  // React 會對 setState 做出優化, 將多個 state 的修改合併為一次, 所以 setState 是異步的, 不能依賴當前的 state 來計算下一個 state
+                  // this.setState({ isOpen: !this.state.isOpen })
+                // }}
+                  onClick={this.handleClick}
+                >
+                  <FiShoppingCart />
+                  <span>購物車 {value.shoppingCart.items.length } (件)</span>
+                </button>
+                <div style={{
+                  display: this.state.isOpen ? "block" : "none"
+                }}
+                >
+                  <ul className={styles.cartDropDown}>
+                    { value.shoppingCart.items.map((i) => {
+                      return (
+                        <li>{i.name}</li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              </div>
+            )
+          }
+        }
+      </appContext.Consumer>
     )
   }
 }
