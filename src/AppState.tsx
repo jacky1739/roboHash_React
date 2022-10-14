@@ -9,8 +9,10 @@ const defaultContextValue: AppStateValue = {
     username: 'jacky',
     shoppingCart: { items: [] }
   }
-  
+
+// 可以在全局使用Context的資料
 export const appContext = React.createContext(defaultContextValue)
+// 可以在全局使用setState的這個方法
 export const appSetStateContext = React.createContext<React.Dispatch<React.SetStateAction<AppStateValue>> | undefined>(undefined)
 
 
